@@ -1,0 +1,146 @@
+{
+    "info": {
+      "name": "Yandex Contest API Microservice",
+      "description": "Collection of endpoints for the Yandex Contest API microservice",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get Problems",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/contests/{{CONTEST_ID}}/problems",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "contests",
+              "{{CONTEST_ID}}",
+              "problems"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Get Problem Statement",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/contests/{{CONTEST_ID}}/problems/{{PROBLEM_ID}}/statement",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "contests",
+              "{{CONTEST_ID}}",
+              "problems",
+              "{{PROBLEM_ID}}",
+              "statement"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Get Full Submission Report",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/contests/{{CONTEST_ID}}/submissions/{{SUBMISSION_ID}}/full",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "contests",
+              "{{CONTEST_ID}}",
+              "submissions",
+              "{{SUBMISSION_ID}}",
+              "full"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Submit Solution",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"language\": \"cpp\",\n  \"solution\": \"#include <iostream>\\nint main() { std::cout << 'Hello, World!'; return 0; }\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/contests/{{CONTEST_ID}}/submissions",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "contests",
+              "{{CONTEST_ID}}",
+              "submissions"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Get Compilers",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/compilers",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "compilers"
+            ]
+          }
+        }
+      }
+    ]
+  }
+  
