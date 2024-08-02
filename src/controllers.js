@@ -1,14 +1,15 @@
 const axios = require('axios');
 
 const BASE_URL = 'https://api.contest.yandex.net/api/public/v2';
-const TOKEN = process.env.TOKEN;
+const { TOKEN } = require('./config');
 
 const getProblems = async (req, res) => {
   const { contestId } = req.params;
   try {
+    console.log(TOKEN)
     const response = await axios.get(`${BASE_URL}/contests/${contestId}/problems`, {
       headers: {
-        Authorization: `OAuth ${TOKEN}`
+        Authorization: `${TOKEN}`
       }
     });
     res.json(response.data);
@@ -22,7 +23,7 @@ const getProblemStatement = async (req, res) => {
   try {
     const response = await axios.get(`${BASE_URL}/contests/${contestId}/problems/${problemId}/statement`, {
       headers: {
-        Authorization: `OAuth ${TOKEN}`
+        Authorization: `${TOKEN}`
       }
     });
     res.json(response.data);
@@ -36,7 +37,7 @@ const getFullSubmissionReport = async (req, res) => {
   try {
     const response = await axios.get(`${BASE_URL}/contests/${contestId}/submissions/${submissionId}/full`, {
       headers: {
-        Authorization: `OAuth ${TOKEN}`
+        Authorization: `${TOKEN}`
       }
     });
     res.json(response.data);
@@ -50,7 +51,7 @@ const submitSolution = async (req, res) => {
   try {
     const response = await axios.post(`${BASE_URL}/contests/${contestId}/submissions`, req.body, {
       headers: {
-        Authorization: `OAuth ${TOKEN}`
+        Authorization: `${TOKEN}`
       }
     });
     res.json(response.data);
@@ -63,7 +64,7 @@ const getCompilers = async (req, res) => {
   try {
     const response = await axios.get(`${BASE_URL}/compilers`, {
       headers: {
-        Authorization: `OAuth ${TOKEN}`
+        Authorization: `${TOKEN}`
       }
     });
     res.json(response.data);
