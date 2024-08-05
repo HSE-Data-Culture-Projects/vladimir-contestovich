@@ -44,13 +44,14 @@ const getProblemStatement = async (req, res) => {
 const getFullSubmissionReport = async (req, res) => {
   const { contestId, submissionId } = req.params;
   try {
-    logger.info('Получен полный отчет по отправке');
+    logger.info('Получаем полный отчет по отправке');
     const response = await axios.get(`${BASE_URL}/contests/${contestId}/submissions/${submissionId}/full`, {
       headers: {
         Authorization: `${TOKEN}`
       }
     });
     res.json(response.data);
+    logger.info('Полный отчет по отправке успешно получен');
   } catch (error) {
     logger.error('Ошибка при получении полного отчета по отправке', error);
     res.status(error.response ? error.response.status : 500).json({ error: error.message });
@@ -63,7 +64,8 @@ const submitSolution = async (req, res) => {
     logger.info('Отправлено решение');
     const formData = new FormData();
     formData.append('compiler', req.body.compiler);
-    formData.append('file', req.file.buffer, req.file.originalname);
+    const fileBlob = new Blob([req.file.buffer], { type: req.file.mimetype });
+    formData.append('file', fileBlob, req.file.originalname);
     formData.append('problem', req.body.problem);
 
     const response = await axios.post(`${BASE_URL}/contests/${contestId}/submissions`, formData, {
@@ -72,7 +74,26 @@ const submitSolution = async (req, res) => {
         'Content-Type': 'multipart/form-data'
       }
     });
-    res.json(response.data);
+
+    const runId = response.data.runId;
+
+    logger.info(`Получен индентификатор посылки: ${runId}. Ожидание проверки.`);
+
+    const getFullReport = async () => {
+      const fullReportResponse = await axios.get(`${BASE_URL}/contests/${contestId}/submissions/${runId}/full`, {
+        headers: {
+          Authorization: `${TOKEN}`
+        }
+      });
+      if (fullReportResponse.data.status === 'WAITING') {
+        logger.info(`Посылка ещё проверяется...`);
+        setTimeout(getFullReport, 3000);
+      } else {
+        logger.info(`Посылка проверена! Статус: ${fullReportResponse.data.status}`);
+        res.json(fullReportResponse.data);
+      }
+    };
+    getFullReport();
   } catch (error) {
     logger.error('Ошибка при отправке решения', error);
     res.status(error.response ? error.response.status : 500).json({ error: error.message });

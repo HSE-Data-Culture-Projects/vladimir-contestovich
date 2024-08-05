@@ -157,3 +157,126 @@ info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
 info: 	Сервер запущен на http://localhost:3000
 info: 	Отправлено решение
 error: 	Ошибка при отправке решения Failed to execute 'append' on 'FormData': parameter 2 is not of type 'Blob'
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+error: 	Ошибка при отправке решения Failed to execute 'append' on 'FormData': parameter 2 is not of type 'Blob'
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+error: 	Ошибка при отправке решения Request failed with status code 400
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+error: 	Ошибка при отправке решения Request failed with status code 400
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+error: 	Ошибка при отправке решения Request failed with status code 400
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+info: 	[object Object]
+error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
+info: 	Отправлено решение
+error: 	Ошибка при отправке решения Request failed with status code 400
+info: 	Отправлено решение
+info: 	[object Object]
+error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+info: 	Получени индентификатор посылки: 
+info: 	116640059
+error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+error: 	Ошибка при отправке решения Request failed with status code 400
+info: 	Отправлено решение
+info: 	Получени индентификатор посылки: 
+info: 	116640125
+error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+info: 	Получени индентификатор посылки: 
+info: 	116640157
+info: 	Маршрут problems
+info: 	Маршрут problem statement
+info: 	Маршрут full submission report
+info: 	Маршрут submit solution
+info: 	Маршрут compilers
+info: 	Сервер запущен
+info: 	OAuth y0_AgAEA7qkKGeUAAwDKAAAAAEIpDZMAACfci71LKBIlK35sZGsbHNPu-W-dQ
+info: 	Сервер запущен на http://localhost:3000
+info: 	Отправлено решение
+info: 	Получен индентификатор посылки: 116640504. Ожидание проверки.
+info: 	Посылка ещё проверяется...
+info: 	Посылка проверена! Статус: FINISHED

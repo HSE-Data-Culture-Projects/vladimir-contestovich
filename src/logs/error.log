@@ -22,3 +22,13 @@ error: 	Ошибка при отправке решения Request failed with 
 error: 	Ошибка при отправке решения Request failed with status code 500
 error: 	Ошибка при отправке решения Failed to execute 'append' on 'FormData': parameter 2 is not of type 'Blob'
 error: 	Ошибка при отправке решения Failed to execute 'append' on 'FormData': parameter 2 is not of type 'Blob'
+error: 	Ошибка при отправке решения Failed to execute 'append' on 'FormData': parameter 2 is not of type 'Blob'
+error: 	Ошибка при отправке решения Request failed with status code 400
+error: 	Ошибка при отправке решения Request failed with status code 400
+error: 	Ошибка при отправке решения Request failed with status code 400
+error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
+error: 	Ошибка при отправке решения Request failed with status code 400
+error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
+error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
+error: 	Ошибка при отправке решения Request failed with status code 400
+error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
