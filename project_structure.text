@@ -1,5 +1,4 @@
 - .DS_Store
-- .env
 - .gitignore
 - Dockerfile
 - README.md
@@ -7,7 +6,9 @@
 - docker-compose.yml
 - package-lock.json
 - package.json
+- project_structure.text
 - src
+  - config.js
   - controllers.js
   - routes.js
   - server.js
