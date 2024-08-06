@@ -25,8 +25,6 @@ const getProblems = async (req, res) => {
   }
 };
 
-
-
 const getProblemStatement = async (req, res) => {
   const { contestId, problemId } = req.params;
   try {
@@ -40,10 +38,66 @@ const getProblemStatement = async (req, res) => {
     // Получаем данные в виде строки
     let data = response.data;
 
-    // Удаляем все символы переноса строки
-    data = data.replace(/\\n/g, '').replace(/\n/g, '');
+    // Добавляем стили
+    data = `
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .problem-statement {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      .header h1.title {
+        color: #333;
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+      }
+      .header table {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .header table td {
+        padding: 5px;
+      }
+      .header table td.property-title {
+        font-weight: bold;
+        color: #555;
+      }
+      h2, h3 {
+        color: #444;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+      }
+      .input-specification, .output-specification {
+        margin-bottom: 20px;
+      }
+      table.sample-tests {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      table.sample-tests th, table.sample-tests td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      table.sample-tests th {
+        background-color: #f2f2f2;
+      }
+      pre {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+    ${data}
+    `;
 
-    res.json(data);
+    res.send(data);
   } catch (error) {
     logger.error('Ошибка при получении описания проблемы', error);
     res.status(error.response ? error.response.status : 500).json({ error: error.message });
@@ -108,7 +162,6 @@ const submitSolution = async (req, res) => {
     res.status(error.response ? error.response.status : 500).json({ error: error.message });
   }
 };
-
 
 const getCompilers = async (req, res) => {
   try {
