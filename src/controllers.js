@@ -44,6 +44,7 @@ const getProblemStatement = async (req, res) => {
       body {
         font-family: Arial, sans-serif;
         margin: 20px;
+        font-size: 16px;
       }
       .problem-statement {
         border: 1px solid #ccc;
@@ -55,6 +56,7 @@ const getProblemStatement = async (req, res) => {
         color: #333;
         border-bottom: 2px solid #333;
         padding-bottom: 5px;
+        font-size: 24px;
       }
       .header table {
         width: 100%;
@@ -71,6 +73,7 @@ const getProblemStatement = async (req, res) => {
         color: #444;
         border-bottom: 1px solid #ddd;
         padding-bottom: 5px;
+        font-size: 22px;
       }
       .input-specification, .output-specification {
         margin-bottom: 20px;
