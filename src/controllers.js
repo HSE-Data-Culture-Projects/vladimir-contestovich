@@ -2,6 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const cheerio = require('cheerio');
 const axios = require('axios');
+const FormData = require('form-data');
 const logger = require('./logger');
 const app = express();
 const upload = multer();
@@ -35,10 +36,8 @@ const getProblemStatement = async (req, res) => {
       }
     });
 
-    // Получаем данные в виде строки
     let data = response.data;
 
-    // Добавляем стили
     data = `
     <style>
       body {
@@ -130,14 +129,13 @@ const submitSolution = async (req, res) => {
     logger.info('Отправлено решение');
     const formData = new FormData();
     formData.append('compiler', req.body.compiler);
-    const fileBlob = new Blob([req.file.buffer], { type: req.file.mimetype });
-    formData.append('file', fileBlob, req.file.originalname);
+    formData.append('file', req.file.buffer, req.file.originalname); // Directly use the buffer and original name
     formData.append('problem', req.body.problem);
-
+    
     const response = await axios.post(`${BASE_URL}/contests/${contestId}/submissions`, formData, {
       headers: {
         Authorization: `${TOKEN}`,
-        'Content-Type': 'multipart/form-data'
+        ...formData.getHeaders()
       }
     });
 
