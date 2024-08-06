@@ -1,5 +1,6 @@
 const express = require('express');
 const multer = require('multer');
+const cheerio = require('cheerio');
 const axios = require('axios');
 const logger = require('./logger');
 const app = express();
@@ -25,6 +26,7 @@ const getProblems = async (req, res) => {
 };
 
 
+
 const getProblemStatement = async (req, res) => {
   const { contestId, problemId } = req.params;
   try {
@@ -34,7 +36,14 @@ const getProblemStatement = async (req, res) => {
         Authorization: `${TOKEN}`
       }
     });
-    res.json(response.data);
+
+    // Получаем данные в виде строки
+    let data = response.data;
+
+    // Удаляем все символы переноса строки
+    data = data.replace(/\\n/g, '').replace(/\n/g, '');
+
+    res.json(data);
   } catch (error) {
     logger.error('Ошибка при получении описания проблемы', error);
     res.status(error.response ? error.response.status : 500).json({ error: error.message });

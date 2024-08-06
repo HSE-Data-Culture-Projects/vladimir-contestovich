@@ -32,3 +32,14 @@ error: 	Ошибка при отправке решения Cannot destructure p
 error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
 error: 	Ошибка при отправке решения Request failed with status code 400
 error: 	Ошибка при отправке решения Cannot destructure property 'contestId' of 'req.params' as it is undefined.
+error: 	Ошибка при получении описания проблемы Request failed with status code 404
+error: 	Ошибка при получении описания проблемы Request failed with status code 404
+error: 	Ошибка при получении описания проблемы Request failed with status code 404
+error: 	Ошибка при получении описания проблемы Request failed with status code 404
+error: 	Ошибка при получении описания проблемы cheerio is not defined
+error: 	Ошибка при получении описания проблемы $.html(...).replaceAll is not a function
+error: 	Ошибка при получении описания проблемы getaddrinfo EAI_AGAIN api.contest.yandex.net
+error: 	Ошибка при получении описания проблемы getaddrinfo EAI_AGAIN api.contest.yandex.net
+error: 	Ошибка при получении описания проблемы getaddrinfo EAI_AGAIN api.contest.yandex.net
+error: 	Ошибка при получении описания проблемы getaddrinfo EAI_AGAIN api.contest.yandex.net
+error: 	Ошибка при получении описания проблемы cleanedHtml is not defined
