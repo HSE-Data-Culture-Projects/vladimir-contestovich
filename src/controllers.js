@@ -149,12 +149,13 @@ const submitSolution = async (req, res) => {
           Authorization: `${TOKEN}`
         }
       });
-      if (fullReportResponse.data.status === 'WAITING') {
+      if (fullReportResponse.data.status === 'FINISHED') {
+      logger.info(`Посылка проверена! Статус: ${fullReportResponse.data.status}`);
+        res.json(fullReportResponse.data);
+        
+      } else {
         logger.info(`Посылка ещё проверяется...`);
         setTimeout(getFullReport, 3000);
-      } else {
-        logger.info(`Посылка проверена! Статус: ${fullReportResponse.data.status}`);
-        res.json(fullReportResponse.data);
       }
     };
     getFullReport();
