@@ -126,12 +126,21 @@ const getFullSubmissionReport = async (req, res) => {
 const submitSolution = async (req, res) => {
   const { contestId } = req.params;
   try {
+    console.log('req.file:', req.file);
+    console.log('req.body:', req.body);
     logger.info('Отправлено решение');
     const formData = new FormData();
     formData.append('compiler', req.body.compiler);
-    formData.append('file', req.file.buffer, req.file.originalname); // Directly use the buffer and original name
     formData.append('problem', req.body.problem);
     
+    if (req.file) {
+      formData.append('file', req.file.buffer, req.file.originalname);
+    } else if (req.body.code && req.body.extension) {
+      formData.append('file', Buffer.from(req.body.code), 'main' + req.body.extension);
+    } else {
+      throw new Error('Нет кода для отправки');
+    }
+
     const response = await axios.post(`${BASE_URL}/contests/${contestId}/submissions`, formData, {
       headers: {
         Authorization: `${TOKEN}`,
@@ -152,7 +161,7 @@ const submitSolution = async (req, res) => {
       if (fullReportResponse.data.status === 'FINISHED') {
       logger.info(`Посылка проверена! Статус: ${fullReportResponse.data.status}`);
         res.json(fullReportResponse.data);
-        
+        console.log(fullReportResponse.data);
       } else {
         logger.info(`Посылка ещё проверяется...`);
         setTimeout(getFullReport, 3000);
